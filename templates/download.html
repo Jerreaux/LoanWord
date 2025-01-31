@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerreaux - Download</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-xl shadow-lg">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900">Dokumen Siap Diunduh</h2>
+                <p class="mt-2 text-gray-600">Dokumen Anda telah berhasil diproses</p>
+            </div>
+            
+            <div class="mt-8">
+                <a href="{% url 'download_document' document_id %}" 
+                   class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Download Dokumen
+                </a>
+            </div>
+            
+            <div class="mt-4 text-center">
+                <a href="{% url 'upload' %}" class="text-indigo-600 hover:text-indigo-500">
+                    Kembali ke Halaman Upload
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
